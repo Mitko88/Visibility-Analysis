@@ -107,7 +107,11 @@ public class VoxelVisibilityAnalysis : MonoBehaviour
                                 if (distanceToHitPoint - distanceToVoxel > 0 || Mathf.Abs(distanceToVoxel - distanceToHitPoint) < voxelSize)
                                 {
                                     voxelModel.Voxels[m][0] = visibleVoxelColor;
-
+                                }
+                                else
+                                {
+                                    voxelModel.Voxels[m][0] = blockedVoxelColor;
+                                    //voxelModel.Voxels[m] = null;
                                 }
                             }
                             else
